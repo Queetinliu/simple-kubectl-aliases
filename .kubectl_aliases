@@ -1,0 +1,57 @@
+# 参考https://github.com/ahmetb/kubectl-aliases/blob/master/.kubectl_aliases
+alias k='kubectl'
+alias kex='kubectl exec -i -t'
+alias klo='kubectl logs -f'
+
+alias kg='kubectl get'
+alias kgpo='kubectl get pods'
+alias kgdep='kubectl get deployment'
+alias kgsts='kubectl get statefulset'
+alias kgsvc='kubectl get service'
+alias kgcm='kubectl get configmap'
+alias kging='kubectl get ingress'
+alias kgno='kubectl get nodes'
+
+alias kgya='kubectl get -o=yaml'
+alias kgdepya='kubectl get deployment -o=yaml'
+alias kgstsya='kubectl get statefulset -o=yaml'
+alias kgsvcya='kubectl get service -o=yaml'
+alias kgingya='kubectl get ingress -o=yaml'
+alias kgcmya='kubectl get configmap -o=yaml'
+
+alias kgowi='kubectl get -o=wide'
+alias kgpowi='kubectl get pods -o=wide'
+
+alias kgsl='kubectl get --show-labels'
+alias kgposl='kubectl get pods --show-labels'
+alias kgdepsl='kubectl get deployment --show-labels'
+alias kgsvcsl='kubectl get service --show-labels'
+alias kgw='kubectl get --watch'
+alias kgpow='kubectl get pods --watch'
+
+alias kgpol='kubectl get pods -l'
+
+alias kd='kubectl describe'
+alias kdpo='kubectl describe pods'
+alias kdsvc='kubectl describe service
+alias kding='kubectl describe ingress'
+alias kdcm='kubectl describe configmap'
+
+alias krm='kubectl delete'
+alias krmpo='kubectl delete pods'
+
+# get container's resource request
+alias kgrr='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.requests}{'\n'}{end}"'
+# get container's resource limit
+alias kgrl='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.limits}{'\n'}{end}"'
+# get container's liveness
+alias kgli='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.livenessProbe}{'\n'}{end}"'
+# get container's readiness
+alias kgri='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.readinessProbe}{'\n'}{end}"''
+# get container's startup
+alias kgst='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.startupProbe}{'\n'}{end}"'
+
+# get events sorted by last timestamp
+alias kgel='kctl get events --sort-by=.lastTimestamp'
+# get events sorted by creation timestamp
+alias kgec='kctl get events --sort-by=.metadata.creationTimestamp'
