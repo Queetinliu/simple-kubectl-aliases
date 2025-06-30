@@ -5,11 +5,17 @@ alias klo='kubectl logs -f'
 
 alias kg='kubectl get'
 alias kgpo='kubectl get pods'
+alias kgpog='kubectl get pods|grep '
 alias kgdep='kubectl get deployment'
+alias kgdepg='kubectl get deployment|grep '
 alias kgsts='kubectl get statefulset'
+alias kgstsg='kubectl get statefulset|grep '
 alias kgsvc='kubectl get service'
+alias kgsvcg='kubectl get service|grep '
 alias kgcm='kubectl get configmap'
+alias kgcmg='kubectl get configmap|grep '
 alias kging='kubectl get ingress'
+alias kgingg='kubectl get ingress|grep '
 alias kgno='kubectl get nodes'
 
 alias kgya='kubectl get -o=yaml'
@@ -33,7 +39,7 @@ alias kgpol='kubectl get pods -l'
 
 alias kd='kubectl describe'
 alias kdpo='kubectl describe pods'
-alias kdsvc='kubectl describe service
+alias kdsvc='kubectl describe service'
 alias kding='kubectl describe ingress'
 alias kdcm='kubectl describe configmap'
 
@@ -41,15 +47,15 @@ alias krm='kubectl delete'
 alias krmpo='kubectl delete pods'
 
 # get container's resource request
-alias kgrr='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.requests}{'\n'}{end}"'
+alias kgresr='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.requests}{'\n'}{end}"'
 # get container's resource limit
-alias kgrl='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.limits}{'\n'}{end}"'
+alias kgresl='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.limits}{'\n'}{end}"'
 # get container's liveness
-alias kgli='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.livenessProbe}{'\n'}{end}"'
+alias kglivepro='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.livenessProbe}{'\n'}{end}"'
 # get container's readiness
-alias kgri='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.readinessProbe}{'\n'}{end}"''
+alias kgreadpro='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.readinessProbe}{'\n'}{end}"'
 # get container's startup
-alias kgst='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.startupProbe}{'\n'}{end}"'
+alias kgstartpro='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.startupProbe}{'\n'}{end}"'
 
 # get events sorted by last timestamp
 alias kgel='kctl get events --sort-by=.lastTimestamp'
