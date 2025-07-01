@@ -17,8 +17,8 @@ alias kgcmg='kubectl get configmap|grep '
 alias kging='kubectl get ingress'
 alias kgingg='kubectl get ingress|grep '
 alias kgno='kubectl get nodes'
-alias kgrep='kubectl get replicatsets'
-alias kgrepg='kubectl get replicatsets|grep '
+alias kgrep='kubectl get replicasets'
+alias kgrepg='kubectl get replicasets|grep '
 
 
 alias kgya='kubectl get -o=yaml'
@@ -51,7 +51,7 @@ alias kdcm='kubectl describe configmap'
 
 alias krm='kubectl delete'
 alias krmpo='kubectl delete pods'
-alias krmrep='kubectl delete replicatsets'
+alias krmrep='kubectl delete replicasets'
 
 # get container's resource request
 alias kgresr='kubectl get deployment -o=jsonpath="{ range .spec.template.spec.containers[*]}{.name} {.resources.requests}{'\n'}{end}"'
