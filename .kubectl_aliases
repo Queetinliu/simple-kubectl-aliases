@@ -27,6 +27,9 @@ alias kgcmya='kubectl get configmap -o=yaml'
 
 alias kgowi='kubectl get -o=wide'
 alias kgpowi='kubectl get pods -o=wide'
+alias kgpowig='kubectl get pods -o=wide|grep '
+
+
 
 alias kgsl='kubectl get --show-labels'
 alias kgposl='kubectl get pods --show-labels'
