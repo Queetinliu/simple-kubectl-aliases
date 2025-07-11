@@ -41,6 +41,8 @@ alias kgsvcsl='kubectl get service --show-labels'
 alias kgw='kubectl get --watch'
 alias kgpow='kubectl get pods --watch'
 
+alias kedep='kubectl edit deployment'
+
 alias kgpol='kubectl get pods -l'
 
 alias kd='kubectl describe'
