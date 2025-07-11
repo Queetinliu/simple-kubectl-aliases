@@ -51,6 +51,9 @@ alias kdsvc='kubectl describe service'
 alias kding='kubectl describe ingress'
 alias kdcm='kubectl describe configmap'
 
+alias kcp='kubectl cp'
+
+
 alias krm='kubectl delete'
 alias krmpo='kubectl delete pods'
 alias krmrep='kubectl delete replicasets'
